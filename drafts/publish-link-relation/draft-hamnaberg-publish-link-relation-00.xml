@@ -11,7 +11,7 @@
   <?rfc comments="yes"?>
   <?rfc inline="yes"?>
   <front>
-    <title>The 'publish' link relation</title>
+    <title>The 'publish' Link Relation Type</title>
     <author initials="E." surname="Hamnaberg" fullname="Erlend Hamnaberg">
       <organization/>
       <address>
@@ -21,7 +21,6 @@
     </author>
     <date year="2014"/>
     <area>General</area>
-    <workgroup>appswg</workgroup>
     <keyword>Internet-Draft</keyword>
     <abstract>
       <t>This memo defines a ‘publish’ link relation and provides 
@@ -39,6 +38,9 @@ accept, but some examples and guidelines will be given.</t>
         <t>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,
 “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this
 document are to be interpreted as described in <xref target="RFC2119"/>.</t>
+      </section>
+      <section anchor="editorial-note-to-be-removed-by-rfc-editor" title="Editorial Note (to be removed by RFC Editor)">
+        <t>Please discuss this draft on the apps-discuss@ietf.org mailing list.</t>
       </section>
     </section>
     <section anchor="publishing" title="Publishing">

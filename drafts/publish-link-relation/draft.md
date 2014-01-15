@@ -1,5 +1,5 @@
 ---
-title: The 'publish' link relation
+title: The 'publish' Link Relation Type
 abbrev: 
 docname: draft-hamnaberg-publish-link-relation-00
 date: 2014
@@ -7,7 +7,7 @@ category: info
 
 ipr: trust200902
 area: General
-workgroup: appswg
+workgroup:
 keyword: Internet-Draft
 
 stand_alone: yes
@@ -34,6 +34,7 @@ informative:
 This memo defines a 'publish' link relation and provides 
 a number of examples.
 
+
 --- middle
 
 Introduction
@@ -54,6 +55,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
 document are to be interpreted as described in {{RFC2119}}.
 
+
+Editorial Note (to be removed by RFC Editor)
+--------------------------------------------
+Please discuss this draft on the apps-discuss@ietf.org mailing list.
 
 Publishing
 ============
