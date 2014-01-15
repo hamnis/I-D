@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../Tools/rfc2629xslt/rfc2629.xslt" ?>
+<!DOCTYPE rfc SYSTEM "../../Tools/rfc2629xslt/rfc2629.dtd">
+<rfc ipr="trust200902" docName="draft-hamnaberg-publish-link-relation-00" category="info">
+  <?rfc toc="yes"?>
+  <?rfc tocindent="yes"?>
+  <?rfc sortrefs="yes"?>
+  <?rfc symrefs="yes"?>
+  <?rfc strict="yes"?>
+  <?rfc compact="yes"?>
+  <?rfc comments="yes"?>
+  <?rfc inline="yes"?>
+  <front>
+    <title>The 'publish' link relation</title>
+    <author initials="E." surname="Hamnaberg" fullname="Erlend Hamnaberg">
+      <organization/>
+      <address>
+        <email>erlend@hamnaberg.net</email>
+        <uri>http://www.hamnis.org/</uri>
+      </address>
+    </author>
+    <date year="2014"/>
+    <area>General</area>
+    <workgroup>appswg</workgroup>
+    <keyword>Internet-Draft</keyword>
+    <abstract>
+      <t>This memo defines a ‘publish’ link relation and provides 
+a number of examples.</t>
+    </abstract>
+  </front>
+  <middle>
+    <section anchor="introduction" title="Introduction">
+      <t>This specification outlines the <spanx style="verb">publish</spanx> link relation and what it 
+means to publish something. The specification will register the relation
+according to <xref target="RFC5988"/>.</t>
+      <t>No assumptions will be made about which media type the target IRI will 
+accept, but some examples and guidelines will be given.</t>
+      <section anchor="notational-conventions" title="Notational Conventions">
+        <t>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,
+“SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this
+document are to be interpreted as described in <xref target="RFC2119"/>.</t>
+      </section>
+    </section>
+    <section anchor="publishing" title="Publishing">
+      <t>What does it mean to publish something? In effect it can be interpreted
+as making something available for general consumption. </t>
+      <t>A newspaper can publish an article, then it can be read by ‘everyone’. </t>
+      <t>A publisher can publish a book, so it can be read. </t>
+      <t>A video can be submitted to youtube so it can be watched.</t>
+      <section anchor="the-publish-link-relation" title="The ‘publish’ link relation">
+        <t>The <spanx style="verb">publish</spanx> link relation allows a resource to be published using the target
+IRI. </t>
+        <t>Clients SHOULD use an appropriate write method of the target IRI protocol
+uniform interface.</t>
+        <t>Clients SHOULD use a POST request when using HTTP.</t>
+        <t>Servers MAY ignore the request to publish something if the resource 
+URI is already published.</t>
+        <t>Examples can be found in <xref target="exp"/></t>
+      </section>
+    </section>
+    <section anchor="iana-considerations" title="IANA Considerations">
+      <t>IANA is asked to register the link relation <spanx style="verb">publish</spanx>, as per <xref target="RFC5988"/></t>
+      <t>Relation Name:</t>
+      <t>publish</t>
+      <t>Description:</t>
+      <t>Allows resources to be published using the target IRI.</t>
+      <t>Reference:</t>
+      <t>[ this document ]</t>
+    </section>
+    <section anchor="security-considerations" title="Security Considerations">
+      <t>TBD</t>
+    </section>
+  </middle>
+  <back>
+    <references title="Normative References">
+      <reference anchor="RFC2119">
+        <front>
+          <title abbrev="RFC Key Words">Key words for use in RFCs to Indicate Requirement Levels</title>
+          <author initials="S." surname="Bradner" fullname="Scott Bradner">
+            <organization>Harvard University</organization>
+            <address>
+              <postal>
+                <street>1350 Mass. Ave.</street>
+                <street>Cambridge</street>
+                <street>MA 02138</street>
+              </postal>
+              <phone>- +1 617 495 3864</phone>
+              <email>sob@harvard.edu</email>
+            </address>
+          </author>
+          <date year="1997" month="March"/>
+          <area>General</area>
+          <keyword>keyword</keyword>
+          <abstract>
+            <t>
+   In many standards track documents several words are used to signify
+   the requirements in the specification.  These words are often
+   capitalized.  This document defines these words as they should be
+   interpreted in IETF documents.  Authors who follow these guidelines
+   should incorporate this phrase near the beginning of their document:
+
+<list><t>
+      The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
+      NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and
+      "OPTIONAL" in this document are to be interpreted as described in
+      RFC 2119.
+</t></list></t>
+            <t>
+   Note that the force of these words is modified by the requirement
+   level of the document in which they are used.
+</t>
+          </abstract>
+        </front>
+        <seriesInfo name="BCP" value="14"/>
+        <seriesInfo name="RFC" value="2119"/>
+        <format type="TXT" octets="4723" target="http://www.rfc-editor.org/rfc/rfc2119.txt"/>
+        <format type="HTML" octets="17970" target="http://xml.resource.org/public/rfc/html/rfc2119.html"/>
+        <format type="XML" octets="5777" target="http://xml.resource.org/public/rfc/xml/rfc2119.xml"/>
+      </reference>
+      <reference anchor="RFC5988">
+        <front>
+          <title>Web Linking</title>
+          <author initials="M." surname="Nottingham" fullname="M. Nottingham">
+            <organization/>
+          </author>
+          <date year="2010" month="October"/>
+          <abstract>
+            <t>This document specifies relation types for Web links, and defines a registry for them.  It also defines the use of such links in HTTP headers with the Link header field. [STANDARDS-TRACK]</t>
+          </abstract>
+        </front>
+        <seriesInfo name="RFC" value="5988"/>
+        <format type="TXT" octets="46834" target="http://www.rfc-editor.org/rfc/rfc5988.txt"/>
+      </reference>
+      <reference anchor="RFC5023">
+        <front>
+          <title>The Atom Publishing Protocol</title>
+          <author initials="J." surname="Gregorio" fullname="J. Gregorio">
+            <organization/>
+          </author>
+          <author initials="B." surname="de hOra" fullname="B. de hOra">
+            <organization/>
+          </author>
+          <date year="2007" month="October"/>
+          <abstract>
+            <t>The Atom Publishing Protocol (AtomPub) is an application-level protocol for publishing and editing Web resources.  The protocol is based on HTTP transfer of Atom-formatted representations.  The Atom format is documented in the Atom Syndication Format. [STANDARDS-TRACK]</t>
+          </abstract>
+        </front>
+        <seriesInfo name="RFC" value="5023"/>
+        <format type="TXT" octets="102274" target="http://www.rfc-editor.org/rfc/rfc5023.txt"/>
+      </reference>
+    </references>
+    <references title="Informative References">
+      <reference anchor="RFC2169">
+        <front>
+          <title abbrev="HTTP in URN Resolution">A Trivial Convention for using HTTP in URN Resolution</title>
+          <author initials="R." surname="Daniel" fullname="R. Daniel">
+            <organization>Los Alamos National Laboratory, Advanced Computing Lab</organization>
+            <address>
+              <postal>
+                <street>MS B287</street>
+                <city>Los Alamos</city>
+                <region>NM</region>
+                <code>87545</code>
+                <country>US</country>
+              </postal>
+              <phone>+1 505 665 0597</phone>
+              <facsimile>+1 505 665 4939</facsimile>
+              <email>rdaniel@lanl.gov</email>
+            </address>
+          </author>
+          <date year="1997" month="June"/>
+          <abstract>
+            <t>The Uniform Resource Names Working Group (URN-WG) was formed to specify persistent, location-independent names for network accessible resources, as well as resolution mechanisms to retrieve the resources given such a name. At this time the URN-WG is considering one particular resolution mechanism, the NAPTR proposal. That proposal specifies how a client may find a "resolver" for a URN. A resolver is a database that can provide information about the resource identified by a URN, such as the resource's location, a bibliographic description, or even the resource itself. The protocol used for the client to communicate with the resolver is not specified in the NAPTR proposal.  Instead, the NAPTR resource record provides a field that indicates the "resolution protocol" and "resolution service requests" offered by the resolver.</t>
+            <t>This document specifies the "THTTP" resolution protocol - a trivial convention for encoding resolution service requests and responses as HTTP 1.0 or 1.1 requests and responses.  The primary goal of THTTP is to be simple to implement so that existing HTTP servers may easily add support for URN resolution. We expect that the databases used by early resolvers will be useful when more sophisticated resolution protocols are developed later.</t>
+          </abstract>
+        </front>
+        <seriesInfo name="RFC" value="2169"/>
+        <format type="TXT" octets="17763" target="http://www.rfc-editor.org/rfc/rfc2169.txt"/>
+      </reference>
+    </references>
+    <section anchor="exp" title="Examples">
+      <t>Let’s say you have an atom feed like the one below</t>
+      <figure>
+        <artwork><![CDATA[
+  <?xml version="1.0" encoding="utf-8"?>
+  <feed xmlns="http://www.w3.org/2005/Atom"
+        xmlns:app="http://www.w3.org/2007/app">
+    <title>Content feed</title>
+    <updated>2005-07-31T12:29:29Z</updated>
+    <id>tag:example.org,2003:3</id>
+    <link rel="self" type="application/atom+xml"
+        href="http://example.org/feed"/>
+    <link rel="publish" 
+      href="http://example.org/publish"/>
+    <entry>
+      <title>Item 1</title>
+      <link rel="edit"
+         href="http://example.org/item/1"/>
+      <id>urn:id:1</id>
+      <app:control>
+        <app:draft>yes</app:draft>
+    <app:control> 
+      <updated>2012-05-04T12:00:29Z</updated>
+      <author>
+        <name>Erlend Hamnaberg</name>
+      </author>
+      <content type="text">
+        Some Content here.
+      </content>
+    </entry>
+    <entry>
+      <title>Item 2</title>
+      <link rel="edit"
+         href="http://example.org/item/2"/>
+      <id>urn:id:1</id>
+      <app:control>
+        <app:draft>yes</app:draft>
+    <app:control>
+      <updated>2012-05-04T12:29:29Z</updated>
+      <author>
+        <name>Erlend Hamnaberg</name>
+      </author>
+      <content type="text">
+        Some Content here.
+      </content>
+    </entry>
+  </feed>
+]]></artwork>
+      </figure>
+      <t>Using Atompub (<xref target="RFC5023"/>), a Client would have to GET each 
+entry using it’s <spanx style="verb">edit</spanx> relation and PUT each back with</t>
+      <figure>
+        <artwork><![CDATA[
+  <app:draft>no</app:draft>
+]]></artwork>
+      </figure>
+      <t>being the only change in both entries.</t>
+      <t>This is highly inefficient. So let us find a better way.</t>
+      <section anchor="publishing-multiple-resources" title="Publishing multiple resources">
+        <t>To be able to publish many resources at once we need a 
+representation which allows this. </t>
+        <t>Appendix A in <xref target="RFC2169"/> defines the <spanx style="verb">text/uri-list</spanx> media type.</t>
+        <t>Extra linefeeds are for display purposes only.</t>
+        <figure>
+          <artwork><![CDATA[
+  POST /publish
+  Host: example.org
+  Content-Type: text/uri-list
+  
+  http://example.org/item/1\r\n
+  http://example.org/item/2\r\n
+]]></artwork>
+        </figure>
+        <t>The problem with this approach is that is is a separate resource, 
+and will not invalidate the caches of the feed. This problem is also apparent 
+in the single item approach.</t>
+        <t>One might mediate this by making the feed resource also accept
+<spanx style="verb">text/uri-list</spanx> for publishing. This could even be indicated in the 
+<spanx style="verb">app:collection</spanx> element like this:</t>
+        <figure>
+          <artwork><![CDATA[
+  <app:collection>
+    <app:accept>text/uri-list</app:accept>
+    <app:accept>application/atom+xml;type=entry</app:accept>
+  </app:collection>
+]]></artwork>
+        </figure>
+        <t>We could then change the request to this:</t>
+        <figure>
+          <artwork><![CDATA[
+  POST /feed
+  Host: example.org
+  Content-Type: text/uri-list
+  
+  http://example.org/item/1\r\n
+  http://example.org/item/2\r\n
+]]></artwork>
+        </figure>
+      </section>
+    </section>
+  </back>
+</rfc>
