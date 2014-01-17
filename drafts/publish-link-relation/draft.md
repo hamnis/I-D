@@ -1,7 +1,7 @@
 ---
 title: The 'publish' Link Relation Type
 abbrev: 
-docname: draft-hamnaberg-publish-link-relation-00
+docname: draft-hamnaberg-publish-link-relation-01
 date: 2014
 category: info
 
@@ -24,10 +24,10 @@ author:
 normative:
   RFC2119:
   RFC5988:
-  RFC5023:
 
 informative:
   RFC2169:
+  RFC5023:
 
 
 --- abstract
@@ -80,8 +80,6 @@ IRI.
 Clients SHOULD use an appropriate write method of the target IRI protocol
 uniform interface.
 
-Clients SHOULD use a POST request when using HTTP.
-
 Servers MAY ignore the request to publish something if the resource 
 URI is already published.
 
@@ -108,6 +106,10 @@ Reference:
 Security Considerations
 =======================
 TBD
+
+Acknowledgements
+================
+Thanks to Jan Algermissen, Peter Rushforth and Darrel Miller for their valuable feedback and comments.
 
 --- back
 
@@ -197,15 +199,7 @@ and will not invalidate the caches of the feed. This problem is also apparent
 in the single item approach.
 
 One might mediate this by making the feed resource also accept
-`text/uri-list` for publishing. This could even be indicated in the 
-`app:collection` element like this:
- 
-~~~~~ 
-  <app:collection>
-    <app:accept>text/uri-list</app:accept>
-    <app:accept>application/atom+xml;type=entry</app:accept>
-  </app:collection>
-~~~~~
+`text/uri-list` for publishing.
 
 We could then change the request to this:
 
